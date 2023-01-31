@@ -14,14 +14,14 @@ pytesseract.pytesseract.tesseract_cmd= r'C:\Program Files\Tesseract-OCR\tesserac
 # pytesseract.pytesseract.tesseract_cmd=r"tesseract"                                                    #For running in cloud
 
 
-app = Flask(__name__, template_folder='template',static_folder='styles')
+application = Flask(__name__, template_folder='template',static_folder='styles')
 logging.basicConfig(filename='logs/record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
  
-app.logger.warning("App starts")
-app.logger.info("info")
+application.logger.warning("App starts")
+application.logger.info("info")
 # Set the location where uploaded files will be stored
 UPLOAD_FOLDER = 'uploads/'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Allow files with the following extensions to be uploaded
 ALLOWED_EXTENSIONS = {'pdf','ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm','xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm'}
@@ -30,12 +30,12 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html')
 
 # API endpoint for file upload
-@app.route('/upload', methods=['POST'])
+@application.route('/upload', methods=['POST'])
 def upload_files():
     file_count=0
     filenames = []
@@ -51,7 +51,7 @@ def upload_files():
         #     return f'File {i+1} not selected'
       
         filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        file.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
         filenames.append(filename)
     if(len(filenames)==0):
         return 'No files selected'
@@ -132,7 +132,7 @@ def textExtractor(doc, file_type):
                 # st.warning("File contents are not clear. Please verify and re-upload a good quality file.")
                 # st.write(e)
                 # print(e)
-                app.logger.info("info")
+                application.logger.info("info")
                 return "not_clear"
 
         elif filetype.lower() in ['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm',
@@ -143,7 +143,7 @@ def textExtractor(doc, file_type):
                 text_extracted = img_to_text(opencv_image)
             except:
                 # st.warning("Image is not clear. Please verify and re-upload a good quality file.")
-                app.logger.info("info")
+                application.logger.info("info")
                 return "not_clear"
         else:
             # st.warning("Please upload a valid file (.pdf, .ras, .xwd, .bmp, .jpe, .jpg, .jpeg, .xpm, .ief, .pbm, .tif, .gif, .ppm, .xbm, .tiff, .rgb, .pgm, .png, .pnm)")
@@ -212,7 +212,7 @@ def textExtractor(doc, file_type):
     return ''
 
 # API endpoint for file check
-@app.route('/file_check', methods=['POST'])
+@application.route('/file_check', methods=['POST'])
 def check_files():
     if 'file' not in request.files:
         return f'File not selected'

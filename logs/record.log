@@ -644,3 +644,5 @@
 2023-01-30 19:27:42,497 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 19:27:42] "GET / HTTP/1.1" 200 -
 2023-01-30 19:27:42,545 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 19:27:42] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
 2023-01-30 19:27:42,561 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 19:27:42] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-01-30 19:47:11,867 WARNING application MainThread : App starts
+2023-01-30 19:47:11,867 INFO application MainThread : info
