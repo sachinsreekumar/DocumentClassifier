@@ -1,0 +1,161 @@
+/* Add a background color and center the page */
+
+header{
+    padding: 10px;
+}
+
+
+#logo{
+    height: 83px;
+}
+::content {
+    background-color: #f6f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the form container */
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #c9c9c9;
+}
+
+/* Style the labels and file input widgets */
+label, .file-input {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style the file input widgets */
+.file-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+}
+
+/* Style the alert messages */
+.alert {
+    margin-top: 0px;
+    padding: 10px;
+    padding-top: 2px !important;
+    
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Style the success alert */
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding-left: 18 !important;
+    padding-bottom: 5 !important;
+    
+}
+
+/* Style the error alert */
+.alert-danger {
+    background-color: #f8d7da;
+    color: #e99817;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.row {
+    margin: 40px;
+}
+
+
+
+#file-form{
+    margin-top: 40px;
+}
+
+.close-button{
+    display: inline-flex;
+}
+
+input[type=file] {
+    width:69%;
+}
+
+.close-button {
+    cursor: pointer;
+}
+
+#status {
+    margin-left: 210px;
+    color: #28a628;
+    font-weight: 500;
+}
+
+/* <!-- HTML !--> */
+
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #08b7fc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #08b7fc;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 30px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #08b7fc;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+input[type="file"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #0A65AC;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 8px;
+  }
+  
+  input[type="file"]:hover {
+    background-color: #0A65AC;
+    color: white;
+  }
+
