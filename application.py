@@ -10,8 +10,8 @@ import logging
 from PIL import Image
 
 #Specifying the path of Tesseract
-# pytesseract.pytesseract.tesseract_cmd= r'C:\Program Files\Tesseract-OCR\tesseract.exe'                  #For running locally
-os.environ['TESSDATA_PREFIX']=r"/usr/bin/tesseract"                                                    #For running in cloud
+pytesseract.pytesseract.tesseract_cmd= r'C:\Program Files\Tesseract-OCR\tesseract.exe'                  #For running locally
+# os.environ['TESSDATA_PREFIX']=r"/usr/bin/tesseract"                                                    #For running in cloud
 
 
 application = Flask(__name__, template_folder='template',static_folder='styles')
@@ -141,8 +141,12 @@ def textExtractor(doc, file_type):
                 file_bytes = np.asarray(bytearray(doc.read()), dtype=np.uint8)
                 opencv_image = cv2.imdecode(file_bytes, 1)
                 text_extracted = img_to_text(opencv_image)
-            except:
+                print("text_extracted")
+                print(text_extracted)
+            except Exception as e:
                 # st.warning("Image is not clear. Please verify and re-upload a good quality file.")
+                print("text exception")
+                print(e)
                 application.logger.info("info")
                 return "not_clear"
         else:
