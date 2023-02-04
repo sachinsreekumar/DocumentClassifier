@@ -12,6 +12,7 @@ from PIL import Image
 #Specifying the path of Tesseract
 # pytesseract.pytesseract.tesseract_cmd= r'C:\Program Files\Tesseract-OCR\tesseract.exe'                  #For running locally
 os.environ['TESSDATA_PREFIX']="/usr/bin/tesseract"                                                    #For running in cloud
+pytesseract.pytesseract.tesseract_cmd=r"tesseract"  
 
 
 application = Flask(__name__, template_folder='template',static_folder='styles')
