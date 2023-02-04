@@ -8,15 +8,15 @@ import pandas as pd
 import numpy as np
 import logging
 from PIL import Image
-from logging.handlers import RotatingFileHandler
+# from logging.handlers import RotatingFileHandler
 #Specifying the path of Tesseract
-pytesseract.pytesseract.tesseract_cmd= r'C:\Program Files\Tesseract-OCR\tesseract.exe'                  #For running locally
-# os.environ['TESSDATA_PREFIX']=r"/usr/bin/tesseract"                                                    #For running in cloud
+# pytesseract.pytesseract.tesseract_cmd= r'C:\Program Files\Tesseract-OCR\tesseract.exe'                  #For running locally
+os.environ['TESSDATA_PREFIX']=r"/usr/bin/tesseract"                                                    #For running in cloud
 
 
 application = Flask(__name__, template_folder='template',static_folder='styles')
 logging.basicConfig(filename='logs/record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
-application.logger.addHandler(RotatingFileHandler('/opt/python/log/application.log', maxBytes=1024,backupCount=5))
+# application.logger.addHandler(RotatingFileHandler('/opt/python/log/application.log', maxBytes=1024,backupCount=5))
 application.logger.warning("App starts")
 application.logger.info("info")
 # Set the location where uploaded files will be stored
