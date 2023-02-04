@@ -11,8 +11,11 @@ from PIL import Image
 # from logging.handlers import RotatingFileHandler
 #Specifying the path of Tesseract
 # pytesseract.pytesseract.tesseract_cmd= r'C:\Program Files\Tesseract-OCR\tesseract.exe'                  #For running locally
-os.environ['TESSDATA_PREFIX']="/usr/bin/tesseract"                                                    #For running in cloud
-pytesseract.pytesseract.tesseract_cmd=r"tesseract"  
+# os.environ['TESSDATA_PREFIX']="/usr/bin/tesseract"                                                    #For running in cloud
+# pytesseract.pytesseract.tesseract_cmd=r"tesseract"  
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+# Set the TESSDATA_PREFIX environment variable
+tessdata_dir_config = '--tessdata-dir "/usr/bin/tesseract/tessdata"'
 
 
 application = Flask(__name__, template_folder='template',static_folder='styles')
