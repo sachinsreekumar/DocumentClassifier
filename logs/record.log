@@ -656,3 +656,5 @@
 2023-01-30 20:16:03,186 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 20:16:03] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
 2023-01-30 20:17:37,695 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 20:17:37] "POST /file_check HTTP/1.1" 200 -
 2023-01-30 20:17:39,236 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 20:17:39] "POST /upload HTTP/1.1" 200 -
+2023-01-30 21:07:00,194 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 21:07:00] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
+2023-01-30 21:07:00,194 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 21:07:00] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
