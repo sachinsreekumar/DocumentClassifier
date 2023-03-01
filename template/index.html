@@ -113,34 +113,46 @@
             }
                 
         }
-        var xhr = new XMLHttpRequest();
+        // var xhr = new XMLHttpRequest();
+        var request = new Request('/upload', {
+            method: 'POST',
+            body: formData
+        });
 
         // Open a connection to the server
-        xhr.open('POST', '/upload', true);
+        // xhr.open('POST', '/upload', true);
 
         // Set the onload function - executes after send
-        xhr.onload = function () { 
-          if (xhr.status === 200) {
+        
+        fetch(request)
+        .then(function (response) { 
+          if (response.status === 200) {
             // Update the status div with the response text
-            if(xhr.responseText.startsWith("No")){
-              document.getElementById('status').innerHTML = xhr.responseText;
-              document.getElementById('status').style.color = "red";
-              document.getElementById('status').style.fontWeight = 500;
-            }
-            else{
-              document.getElementById('status').innerHTML = xhr.responseText;
-              document.getElementById('status').style.color = "green";
-              document.getElementById('status').style.fontWeight = 500;
-            }
-            document.getElementById('status').innerHTML = xhr.responseText;
-          } else {
+            // responseJSON = JSON.parse(xhr.responseText)
+            // responseMsg = responseJSON.message
+            
+            response.json().then(function(data) {
+              var responseMsg = data.message;
+              if(responseMsg.startsWith("No")){
+                document.getElementById('status').innerHTML = responseMsg;
+                document.getElementById('status').style.color = "red";
+                document.getElementById('status').style.fontWeight = 500;
+              }
+              else{
+                document.getElementById('status').innerHTML = responseMsg;
+                document.getElementById('status').style.color = "green";
+                document.getElementById('status').style.fontWeight = 500;
+              }
+              document.getElementById('status').innerHTML = responseMsg;
+            });
+            } else {
             // Update the status div with the error message
             document.getElementById('status').innerHTML = 'An error occurred';
           }
-        };
-
-        // Send the FormData object
-        xhr.send(formData);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
       }
 
       function onFileSelected(event) {
@@ -150,19 +162,24 @@
         var formData = new FormData();
         formData.append('file', file);
         formData.append('input_id', input.id);
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/file_check');
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('POST', '/file_check');
         var alertElement = document.getElementById(alertId);
         if(file){
           var closeButtonId = event.target.id + "-close";
           document.getElementById(closeButtonId).style.display = "inline-block";
         }
-        xhr.onload = function () {
-          if (xhr.status === 200) {
+        fetch('/file_check', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
             // Update the status div with the response text
-            
+            console.log(formData)
+            responsetext = data.message;
             alertElement.classList.remove("alert");
-            if (xhr.responseText === "success") {
+            if (responsetext === "success") {
               if ($(".alert-danger").is(":visible")) {
                 alertElement.classList.remove("alert-danger");
               } 
@@ -171,9 +188,9 @@
             }
             else{
               alertElement.classList.add("alert-danger");
-              console.log(xhr.responseText+" "+xhr.responseText.includes("This document looks like") )
-              if(xhr.responseText.includes("This document looks like")){
-                alert_arr=xhr.responseText.split(".")
+              console.log(responsetext+" "+responsetext.includes("This document looks like") )
+              if(responsetext.includes("This document looks like")){
+                alert_arr=responsetext.split(".")
                 alertElement.innerHTML = alert_arr[0]+".";
                 var paragraph = document.createElement("P");
                 paragraph.innerHTML = alert_arr[1];
@@ -182,19 +199,19 @@
                 alertElement.appendChild(paragraph);
               }
               else{
-                alertElement.innerHTML = xhr.responseText
+                alertElement.innerHTML = responsetext
               }
               
             }
-          } else {
+          })
+           .catch(error => {
             // Update the status div with the error message
             alertElement.classList.remove("alert");
             alertElement.classList.add("alert-danger");
             alertElement.innerHTML = 'An error occurred';
-          }
-        }
-      xhr.send(formData);
-    }
+          });
+      }
+
 
 
     $('.close-button').click(function(){

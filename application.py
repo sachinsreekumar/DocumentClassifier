@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 from werkzeug.utils import secure_filename
 import os
 import PyPDF2
@@ -13,7 +13,8 @@ from PIL import Image
 # pytesseract.pytesseract.tesseract_cmd= r'C:\Program Files\Tesseract-OCR\tesseract.exe'                  #For running locally
 # os.environ['TESSDATA_PREFIX']="/usr/bin/tesseract"                                                    #For running in cloud
 # pytesseract.pytesseract.tesseract_cmd=r"tesseract"  
-pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'                                            #Cloud
 # Set the TESSDATA_PREFIX environment variable
 tessdata_dir_config = '--tessdata-dir "/usr/bin/tesseract/tessdata"'
 
@@ -58,8 +59,8 @@ def upload_files():
         file.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
         filenames.append(filename)
     if(len(filenames)==0):
-        return 'No files selected'
-    return 'Files uploaded successfully'
+        return jsonify({"message": "No files selected"})
+    return jsonify({"message": "Files uploaded successfully"})
 
 
 #Function to preprocess image and returns text from it
@@ -223,7 +224,7 @@ def textExtractor(doc, file_type):
 @application.route('/file_check', methods=['POST'])
 def check_files():
     if 'file' not in request.files:
-        return f'File not selected'
+        return jsonify({"message": "File not selected"})
     file = request.files['file']
     file_name = file.filename
     file_id = request.form.get('input_id')
@@ -241,4 +242,7 @@ def check_files():
         message ="⚠️Please make sure you uploaded the right document.\nThis document looks like a " + status.split("-")[1]
     elif(status.startswith("scanned_pdf_warning")):
         message="File contents are not clear. Please try with an image format."
-    return message
+    return jsonify({"message": message})
+
+if __name__ == "__main__":
+    application.run()

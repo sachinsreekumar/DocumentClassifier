@@ -658,3 +658,121 @@
 2023-01-30 20:17:39,236 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 20:17:39] "POST /upload HTTP/1.1" 200 -
 2023-01-30 21:07:00,194 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 21:07:00] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
 2023-01-30 21:07:00,194 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [30/Jan/2023 21:07:00] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-02-28 19:26:15,283 WARNING application MainThread : App starts
+2023-02-28 19:26:15,283 INFO application MainThread : info
+2023-02-28 19:26:35,879 WARNING application MainThread : App starts
+2023-02-28 19:26:35,879 INFO application MainThread : info
+2023-02-28 19:27:52,894 WARNING application MainThread : App starts
+2023-02-28 19:27:52,894 INFO application MainThread : info
+2023-02-28 19:28:08,228 WARNING application MainThread : App starts
+2023-02-28 19:28:08,228 INFO application MainThread : info
+2023-02-28 19:29:46,909 WARNING application MainThread : App starts
+2023-02-28 19:29:46,909 INFO application MainThread : info
+2023-02-28 19:31:05,868 WARNING application MainThread : App starts
+2023-02-28 19:31:05,868 INFO application MainThread : info
+2023-02-28 19:31:05,899 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-28 19:31:05,899 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 19:31:17,902 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:31:17] "GET / HTTP/1.1" 200 -
+2023-02-28 19:31:18,251 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:31:18] "GET /styles/style.css HTTP/1.1" 200 -
+2023-02-28 19:31:18,510 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:31:18] "GET /styles/assets/logo.png HTTP/1.1" 200 -
+2023-02-28 19:31:18,753 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:31:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-02-28 19:43:44,449 INFO application Thread-5 (process_request_thread) : info
+2023-02-28 19:43:44,449 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:43:44] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 19:44:04,305 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:44:04] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 19:44:24,000 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:44:24] "POST /upload HTTP/1.1" 200 -
+2023-02-28 19:44:58,503 WARNING application MainThread : App starts
+2023-02-28 19:44:58,503 INFO application MainThread : info
+2023-02-28 19:44:58,515 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-28 19:44:58,515 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 19:45:03,657 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:45:03] "GET / HTTP/1.1" 200 -
+2023-02-28 19:45:03,846 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:45:03] "GET /styles/style.css HTTP/1.1" 200 -
+2023-02-28 19:45:03,893 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:45:03] "GET /styles/assets/logo.png HTTP/1.1" 200 -
+2023-02-28 19:45:08,536 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:45:08] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 19:46:47,632 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:46:47] "POST /upload HTTP/1.1" 200 -
+2023-02-28 19:52:54,615 WARNING application MainThread : App starts
+2023-02-28 19:52:54,615 INFO application MainThread : info
+2023-02-28 19:52:54,639 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-28 19:52:54,640 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 19:53:12,026 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:53:12] "GET / HTTP/1.1" 200 -
+2023-02-28 19:53:12,183 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:53:12] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
+2023-02-28 19:53:12,246 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:53:12] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-02-28 19:53:18,584 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:53:18] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 19:53:20,377 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:53:20] "POST /upload HTTP/1.1" 200 -
+2023-02-28 19:53:31,005 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:53:31] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 19:59:26,361 WARNING application MainThread : App starts
+2023-02-28 19:59:26,361 INFO application MainThread : info
+2023-02-28 19:59:26,399 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-28 19:59:26,399 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 19:59:30,399 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:59:30] "GET / HTTP/1.1" 200 -
+2023-02-28 19:59:30,603 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:59:30] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
+2023-02-28 19:59:30,651 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:59:30] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-02-28 19:59:36,064 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:59:36] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 19:59:41,555 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 19:59:41] "POST /upload HTTP/1.1" 200 -
+2023-02-28 20:00:48,296 WARNING application MainThread : App starts
+2023-02-28 20:00:48,296 INFO application MainThread : info
+2023-02-28 20:00:48,327 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-28 20:00:48,327 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 20:00:51,134 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:00:51] "GET / HTTP/1.1" 200 -
+2023-02-28 20:00:51,283 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:00:51] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
+2023-02-28 20:00:51,323 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:00:51] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-02-28 20:00:59,633 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:00:59] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 20:01:06,191 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:01:06] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 20:01:12,035 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:01:12] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 20:01:19,574 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:01:19] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 20:01:29,447 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:01:29] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 20:01:35,419 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:01:35] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 20:01:41,283 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:01:41] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 20:01:49,034 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:01:49] "POST /upload HTTP/1.1" 200 -
+2023-02-28 20:20:12,824 WARNING application MainThread : App starts
+2023-02-28 20:20:12,824 INFO application MainThread : info
+2023-02-28 20:20:12,844 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-28 20:20:12,844 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 20:20:20,911 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:20:20] "GET / HTTP/1.1" 200 -
+2023-02-28 20:20:20,987 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:20:20] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
+2023-02-28 20:20:21,010 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:20:21] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-02-28 20:20:25,395 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:20:25] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 20:20:27,682 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:20:27] "POST /upload HTTP/1.1" 200 -
+2023-02-28 20:20:35,633 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:20:35] "POST /upload HTTP/1.1" 200 -
+2023-02-28 20:25:37,956 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:25:37] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+2023-02-28 20:25:45,332 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:25:45] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+2023-02-28 20:25:46,787 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:25:46] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+2023-02-28 20:25:51,326 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:25:51] "POST /upload HTTP/1.1" 200 -
+2023-02-28 20:26:03,026 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 20:26:03] "POST /upload HTTP/1.1" 200 -
+2023-02-28 22:32:49,184 WARNING application MainThread : App starts
+2023-02-28 22:32:49,184 INFO application MainThread : info
+2023-02-28 22:32:49,203 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-28 22:32:49,203 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 22:33:02,330 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:02] "GET / HTTP/1.1" 200 -
+2023-02-28 22:33:02,407 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:02] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
+2023-02-28 22:33:02,426 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:02] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-02-28 22:33:04,193 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:04] "GET / HTTP/1.1" 200 -
+2023-02-28 22:33:04,210 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:04] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
+2023-02-28 22:33:04,223 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:04] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-02-28 22:33:14,843 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:14] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:33:24,893 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:24] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:33:31,994 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:31] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:33:36,736 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:33:36] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:37:03,242 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:37:03] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:37:22,413 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:37:22] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:37:50,293 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:37:50] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:37:51,490 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:37:51] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:39:47,947 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:39:47] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:40:37,068 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:40:37] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:40:38,063 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:40:38] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:44:31,119 WARNING application MainThread : App starts
+2023-02-28 22:44:31,119 INFO application MainThread : info
+2023-02-28 22:44:31,130 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-28 22:44:31,130 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 22:44:36,411 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:44:36] "GET / HTTP/1.1" 200 -
+2023-02-28 22:44:36,471 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:44:36] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
+2023-02-28 22:44:36,493 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:44:36] "[36mGET /styles/assets/logo.png HTTP/1.1[0m" 304 -
+2023-02-28 22:44:48,517 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:44:48] "POST /file_check HTTP/1.1" 200 -
+2023-02-28 22:44:51,789 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 22:44:51] "[36mGET /styles/style.css HTTP/1.1[0m" 304 -
